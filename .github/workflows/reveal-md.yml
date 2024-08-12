@@ -40,11 +40,11 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with mdBook
-        run: reveal-md slides/slides.md --static --static-dirs=slides/images _site
+        run: reveal-md slides/slides.md --static --static-dirs=slides/images
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./_site
+          path: ./_static
 
   # Deployment job
   deploy:
