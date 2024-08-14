@@ -39,8 +39,11 @@ jobs:
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with mdBook
+      - name: Build with reveal-md
         run: reveal-md slides/slides.md --static --static-dirs=slides/images
+      - name: Add CNAME
+        run: |
+           bash echo "slides.phishsim.email" > ./_static/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
