@@ -43,7 +43,7 @@ jobs:
         run: reveal-md slides/slides.md --static --static-dirs=slides/images
       - name: Add CNAME
         run: |
-           bash echo "slides.phishsim.email" > ./_static/CNAME
+           echo "slides.phishsim.email" > ./_static/CNAME
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
