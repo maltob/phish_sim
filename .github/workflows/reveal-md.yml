@@ -40,7 +40,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with reveal-md
-        run: reveal-md slides/slides.md --static --static-dirs=slides/images --css .\slides\style.css
+        run: reveal-md slides/slides.md --static --static-dirs=slides/images --css slides/style.css
       - name: Add CNAME
         run: |
            echo "slides.phishsim.email" > ./_static/CNAME
